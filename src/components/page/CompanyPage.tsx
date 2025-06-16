@@ -1,9 +1,15 @@
 'use client';
 
-import { SheetDemo } from './CompanyForm';
+import { CompanyForm } from './CompanyForm';
+import { CompanyList } from './CompanyList';
 
 const CompanyPage = () => {
-  return <div><SheetDemo /></div>;
+  return (
+    <div>
+      <CompanyForm />
+      <CompanyList />
+    </div>
+  );
 };
 
 export default CompanyPage;
