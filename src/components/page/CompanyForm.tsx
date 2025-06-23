@@ -11,7 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { useNewCompany } from './use-company';
+import { useNewCompany } from './use-new-company';
 
 export function CompanyForm() {
   const { register, handleSubmit } = useNewCompany();

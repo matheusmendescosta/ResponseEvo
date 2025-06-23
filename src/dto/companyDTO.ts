@@ -5,8 +5,15 @@ export type companies = {
   createdAt: string;
 };
 
-export type companyDTO = {
+export type companiesDTO = {
   limit: number;
   page: number;
   companies: companies[];
+};
+
+export type companyDTO = {
+  id: string;
+  name: string;
+  cnpj: string;
+  createdAt: string;
 };

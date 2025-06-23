@@ -9,6 +9,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { useCompanies } from './use-companies';
+import Link from 'next/link';
 
 export function CompanyList() {
   const { companies, isLoading, error } = useCompanies();
@@ -29,7 +30,11 @@ export function CompanyList() {
             <TableRow key={company.id}>
               <TableCell>{company.name}</TableCell>
               <TableCell>{company.cnpj}</TableCell>
-              <TableCell className="text-left">Criar formulario</TableCell>
+              <TableCell className="text-left">
+                <Link href={`/dashboard/company/${company.id}/form`}>
+                  Criar formulário
+                </Link>
+              </TableCell>
             </TableRow>
           ))}
       </TableBody>

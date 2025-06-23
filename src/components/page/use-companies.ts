@@ -1,10 +1,10 @@
 'use client';
 
-import { companyDTO } from '@/dto/companyDTO';
+import { companiesDTO } from '@/dto/companyDTO';
 import { useCallback, useEffect, useState } from 'react';
 
 export const useCompanies = () => {
-  const [companies, setCompanies] = useState<companyDTO>();
+  const [companies, setCompanies] = useState<companiesDTO>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -19,7 +19,7 @@ export const useCompanies = () => {
         }
         return response.json();
       })
-      .then((data: companyDTO) => {
+      .then((data: companiesDTO) => {
         setCompanies(data);
       })
       .catch((err) => {
